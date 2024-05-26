@@ -1,17 +1,14 @@
-// dataCreate.js
+// Import the necessary Firebase modules
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, doc, setDoc } from 'firebase/firestore';
+import firebaseConfig from './firebaseConfig'; // Import your Firebase configuration file
+import dataUser from './dataUser'; // Import the JSON data to be added to Firestore
 
-import { initializeApp, credential as _credential, firestore } from 'firebase-admin';
-import serviceAccount from './serviceAccountKey.json';
-import dataUser from './data.json';
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
 
-
-// Initialize Firebase Admin SDK
-initializeApp({
-    credential: _credential.cert(serviceAccount),
-});
-
-// Create a Firestore database reference
-const db = firestore();
+// Get a Firestore database reference
+const db = getFirestore(firebaseApp);
 
 // Function to create data in Firestore
 const createDataInFirestore = async (data = dataUser) => {
@@ -19,17 +16,17 @@ const createDataInFirestore = async (data = dataUser) => {
         // Loop through each collection in the JSON data
         for (const collectionName in data) {
             // Get the collection reference
-            const collectionRef = db.collection(collectionName);
+            const collectionRef = collection(db, collectionName);
 
             // Check if the collection exists
-            const collectionSnapshot = await collectionRef.get();
+            const collectionSnapshot = await getDocs(collectionRef);
 
             // If the collection doesn't exist, create it
             if (collectionSnapshot.empty) {
                 // Loop through each document in the collection
                 for (const docId in data[collectionName]) {
                     // Add the document to the collection
-                    await collectionRef.doc(docId).set(data[collectionName][docId]);
+                    await setDoc(doc(collectionRef, docId), data[collectionName][docId]);
                 }
                 console.log(`Collection '${collectionName}' created with documents.`);
             } else {
