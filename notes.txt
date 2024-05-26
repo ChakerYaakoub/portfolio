@@ -47,6 +47,7 @@ now you have to find the  Configuration :
 chose the project / Project settings  : navigate to web  app  
 
 now you have to setup you storage  :
+add the rules : 
 service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
@@ -56,6 +57,13 @@ service firebase.storage {
 }
 
 now you have to setup you Database  :
+you have to switch  you data to native mode first 
+in the : Go to Google Cloud Console 
+enter ==> default 
+change to native mode 
+
+add the rules : 
+
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {

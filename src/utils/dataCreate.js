@@ -1,8 +1,8 @@
 // Import the necessary Firebase modules
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, doc, setDoc } from 'firebase/firestore';
-import { firebaseConfig } from './serviceAccountKey.json'; // Import your Firebase configuration file
 import dataUser from './data.json'; // Import the JSON data to be added to Firestore
+import firebaseConfig from './serviceAccountKey';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
