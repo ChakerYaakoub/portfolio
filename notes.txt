@@ -44,7 +44,11 @@ firebase deploy
 
 
 now you have to find the  Configuration : 
-chose the project / Project settings  : navigate to web  app 
+chose the project / Project settings  : navigate to web  app  
+
+
+npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
 
 
 
