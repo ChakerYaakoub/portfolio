@@ -15,7 +15,7 @@ const createDataInFirestore = async (data = dataUser) => {
     try {
         // Loop through each collection in the JSON dataUser object
         for (const collectionName in data.dataUser) {
-            console.log(`Creating collection '${collectionName}'...`);
+            // console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
 
@@ -26,7 +26,7 @@ const createDataInFirestore = async (data = dataUser) => {
             if (collectionSnapshot.empty) {
                 // Loop through each document in the collection
                 for (const docId in data.dataUser[collectionName]) {
-                    console.log(`Adding document to collection '${collectionName}'...`);
+                    // console.log(`Adding document to collection '${collectionName}'...`);
                     // Add the document to the collection and let Firestore generate the ID
                     await addDoc(collectionRef, data.dataUser[collectionName][docId]);
                 }
@@ -42,5 +42,4 @@ const createDataInFirestore = async (data = dataUser) => {
     }
 };
 
-// Export the function to use in other files
 export default createDataInFirestore;

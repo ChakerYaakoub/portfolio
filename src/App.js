@@ -1,34 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
-import createDataInFirestore from './utils/dataCreate';
-
-
+import "./App.css";
+import { useEffect } from "react";
+import createDataInFirestore from "./utils/dataCreate";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDataAndStoreInRedux } from './reducers/dataReducer';
 
 function App() {
-
-
   useEffect(() => {
     createDataInFirestore();
-  }, []); //  runs only once
+  }, []); // runs only once
 
+  const dispatch = useDispatch();
+  const data = useSelector(state => state.data);
+
+  useEffect(() => {
+    dispatch(fetchDataAndStoreInRedux());
+  }, [dispatch]);
+
+  useEffect(() => {
+    console.log('Data from Redux:', data);
+  }, [data]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nulla
+          perspiciatis autem eveniet dignissimos incidunt temporibus saepe
+          dolores sapiente porro. Voluptatem eligendi quidem excepturi deserunt
+          molestiae a veniam unde neque.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
