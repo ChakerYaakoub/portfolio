@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import createDataInFirestore from "./utils/dataCreate";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDataAndStoreInRedux } from './reducers/dataReducer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Home, NotFound404 } from "./Pages/index";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -22,14 +26,17 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nulla
-          perspiciatis autem eveniet dignissimos incidunt temporibus saepe
-          dolores sapiente porro. Voluptatem eligendi quidem excepturi deserunt
-          molestiae a veniam unde neque.
-        </p>
-      </div>
+      <Router>
+        <Header data={data} />
+        <Routes>
+          {/* Home Page Routes  */}
+          <Route exact path="/" element={<Home />} />
+          {/* 404  Page   */}
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
+        <Footer data={data} />
+      </Router>
+
     </div>
   );
 }
