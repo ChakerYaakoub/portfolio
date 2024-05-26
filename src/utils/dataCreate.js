@@ -1,6 +1,6 @@
 // Import the necessary Firebase modules
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import dataUser from './data.json'; // Import the JSON data to be added to Firestore
 import firebaseConfig from './serviceAccountKey';
 
@@ -21,9 +21,9 @@ const createDataInFirestore = async (data = dataUser) => {
 
             // Loop through each document in the collection
             for (const docId in data.dataUser[collectionName]) {
-                console.log(`Adding document '${docId}' to collection '${collectionName}'...`);
-                // Add the document to the collection
-                await setDoc(doc(collectionRef, docId), data.dataUser[collectionName][docId]);
+                console.log(`Adding document to collection '${collectionName}'...`);
+                // Add the document to the collection and let Firestore generate the ID
+                await addDoc(collectionRef, data.dataUser[collectionName][docId]);
             }
 
             console.log(`Collection '${collectionName}' created with documents.`);
