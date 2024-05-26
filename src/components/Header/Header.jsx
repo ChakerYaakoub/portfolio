@@ -13,13 +13,13 @@ const navItems = [
 ];
 
 function Header({ data }) {
-  console.log(data.userInfo);
+  console.log(data);
   return (
     <header className="header" data-header>
       <div className="container">
         <Link to={"/"}>
           <img
-            src={data.userInfo.logoPath}
+            // src={data.userInfo.logoPath}
             alt="Bilal Logo"
             className="logoImage"
           />
