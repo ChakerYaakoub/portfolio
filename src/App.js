@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
+import createDataInFirestore from '../utils/dataCreate';
 
-const createDataInFirestore = require('./utils/dataCreate');
 
 
 function App() {
