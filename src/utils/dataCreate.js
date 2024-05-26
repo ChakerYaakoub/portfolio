@@ -13,31 +13,22 @@ const db = getFirestore(firebaseApp);
 // Function to create data in Firestore
 const createDataInFirestore = async (data = dataUser) => {
     try {
-        // Loop through each collection in the JSON data
+        // Loop through each collection in the JSON dataUser object
         for (const collectionName in data.dataUser) {
             console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
 
-            // Check if the collection exists
-            const collectionSnapshot = await getDocs(collectionRef);
-
-
-            // If the collection doesn't exist, create it
-            if (collectionSnapshot.empty) {
-                // Loop through each document in the collection
-                for (const docId in data[collectionName]) {
-                    // Add the document to the collection
-                    await setDoc(doc(collectionRef, docId), data[collectionName][docId]);
-
-                    const snapshot = await db.collection('images').get();
-                    console.log(snapshot.docs);
-                }
-                console.log(`Collection '${collectionName}' created with documents.`);
-            } else {
-                console.log(`Collection '${collectionName}' already exists.`);
+            // Loop through each document in the collection
+            for (const docId in data.dataUser[collectionName]) {
+                console.log(`Adding document '${docId}' to collection '${collectionName}'...`);
+                // Add the document to the collection
+                await setDoc(doc(collectionRef, docId), data.dataUser[collectionName][docId]);
             }
+
+            console.log(`Collection '${collectionName}' created with documents.`);
         }
+
         console.log('Data creation complete.');
     } catch (error) {
         console.error('Error creating data:', error);
