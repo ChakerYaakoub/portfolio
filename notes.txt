@@ -46,6 +46,30 @@ firebase deploy
 now you have to find the  Configuration : 
 chose the project / Project settings  : navigate to web  app  
 
+now you have to setup you storage  :
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write;
+    }
+  }
+}
+
+now you have to setup you Database  :
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /123/{document=**} {
+      allow read, write: if true;
+    }
+    match /images/{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+
+
+
 
 npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
