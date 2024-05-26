@@ -15,11 +15,13 @@ const createDataInFirestore = async (data = dataUser) => {
     try {
         // Loop through each collection in the JSON data
         for (const collectionName in data) {
+            console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
 
             // Check if the collection exists
             const collectionSnapshot = await getDocs(collectionRef);
+            console.log(collectionSnapshot);
 
             // If the collection doesn't exist, create it
             if (collectionSnapshot.empty) {
