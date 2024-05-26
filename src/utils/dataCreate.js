@@ -22,6 +22,7 @@ const createDataInFirestore = async (data = dataUser) => {
 
             // Check if the collection exists
             const collectionSnapshot = await getDocs(collectionRef);
+            // const snapshot = await db.collection('images').get();
             console.log(collectionSnapshot);
 
             // If the collection doesn't exist, create it
