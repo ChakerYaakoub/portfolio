@@ -15,34 +15,34 @@
                     "Service 1",
                     "Service 2"
                 ],
-                "profileImgPath": "path/to/profile/image",
-                "logoPath": "path/to/logo/image",
-                "logoPath2": "path/to/logo/image",
+                "profileImgPath": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/profileImgPath.jpg?alt=media&token=52593070-8a87-4002-b771-958165f79378",
+                "logoPath": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/logoPath1.jpg?alt=media&token=6754d42e-5325-4096-9fbe-f7d3bbea32e2",
+                "logoPath2": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/logoPath2.mp4?alt=media&token=42339e4b-6e1c-49b4-a1ff-4fbcda23e023",
                 "yearsExperience": 2010,
                 "clientsNumber": 100
             }
         },
         "workspaceDescriptions": [
             {
-                "photo": "path/to/workspace/photo",
+                "photo": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/workspaceDescriptions4.webp?alt=media&token=2d8d3e4b-e5b1-4ac9-8f45-24a232e6c532",
                 "title": "Workspace Title 1",
                 "briefDescription": "Brief description of workspace 1",
                 "description": "Full description of workspace 1"
             },
             {
-                "photo": "path/to/workspace/photo",
+                "photo": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/workspaceDescriptions1.webp?alt=media&token=a5b03a73-7757-47ce-a86f-2f2780df0e27",
                 "title": "Workspace Title 2",
                 "briefDescription": "Brief description of workspace 2",
                 "description": "Full description of workspace 2"
             } ,
             {
-                "photo": "path/to/workspace/photo",
+                "photo": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/workspaceDescriptions2.jpg?alt=media&token=9440390e-9b51-43df-9629-c16f695ddec1",
                 "title": "Workspace Title 3",
                 "briefDescription": "Brief description of workspace 2",
                 "description": "Full description of workspace 2"
             } ,
             {
-                "photo": "path/to/workspace/photo",
+                "photo": "https://firebasestorage.googleapis.com/v0/b/portfolio-4f6b5.appspot.com/o/workspaceDescriptions2.png?alt=media&token=5779eef1-e40d-44d8-93c2-02ed988aef54",
                 "title": "Workspace Title 4",
                 "briefDescription": "Brief description of workspace 2",
                 "description": "Full description of workspace 2"
@@ -51,7 +51,7 @@
         "skills": {
             "skillsInfo": {
                 "resume": "Resume text",
-                "photo": "path/to/workspace/photo",
+                "photo": "https://console.firebase.google.com/u/0/project/portfolio-4f6b5/storage/portfolio-4f6b5.appspot.com/files",
                 "skills": [
                     {
                         "name": "Skill 1",
