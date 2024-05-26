@@ -18,12 +18,10 @@ const createDataInFirestore = async (data = dataUser) => {
             console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
-            console.log(collectionRef);
 
             // Check if the collection exists
             const collectionSnapshot = await getDocs(collectionRef);
-            // const snapshot = await db.collection('images').get();
-            console.log(collectionSnapshot);
+
 
             // If the collection doesn't exist, create it
             if (collectionSnapshot.empty) {
@@ -31,6 +29,9 @@ const createDataInFirestore = async (data = dataUser) => {
                 for (const docId in data[collectionName]) {
                     // Add the document to the collection
                     await setDoc(doc(collectionRef, docId), data[collectionName][docId]);
+
+                    const snapshot = await db.collection('images').get();
+                    console.log(snapshot.docs);
                 }
                 console.log(`Collection '${collectionName}' created with documents.`);
             } else {
