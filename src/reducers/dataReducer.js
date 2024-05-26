@@ -2,6 +2,7 @@
 // Action Creator to fetch data and store in Redux
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import collections from '../utils/collections';
 
 // Action Creator to fetch data and store in Redux
 export const fetchDataAndStoreInRedux = createAsyncThunk(
@@ -10,17 +11,16 @@ export const fetchDataAndStoreInRedux = createAsyncThunk(
         try {
             const db = getFirestore();
             const allData = {};
-            const collections = ['userInfo', 'workspaceDescriptions', 'skills', 'workingPeriods', 'aboutUs', 'services', 'contactUs'];
 
             for (const collectionName of collections) {
-                console.log(`Fetching data from collection '${collectionName}'...`);
+                // console.log(`Fetching data from collection '${collectionName}'...`);
                 const collectionRef = collection(db, collectionName);
                 const snapshot = await getDocs(collectionRef);
                 const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
                 allData[collectionName] = data;
             }
 
-            console.log('Data fetched:', allData);
+            // console.log('Data fetched:', allData);
             return allData;
         } catch (error) {
             console.error('Error fetching data:', error);
