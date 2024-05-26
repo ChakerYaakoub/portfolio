@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 function Header({ data }) {
-  console.log(data.userInfo);
+  console.log(data.userInfo.logoPath);
   return (
     <header className="header" data-header>
       <div className="container">
