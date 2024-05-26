@@ -1,23 +1,25 @@
 {
     "dataUser": {
         "userInfo": {
-            "name": "Chaker",
-            "lastName": "Yaakoub",
-            "middleName": "Ayoub",
-            "specializations": [
-                "Specialization 1",
-                "Specialization 2"
-            ],
-            "workDomain": "Work Domain",
-            "about": "About John Doe",
-            "services": [
-                "Service 1",
-                "Service 2"
-            ],
-            "profileImgPath": "path/to/profile/image",
-            "logoPath": "path/to/logo/image",
-            "yearsExperience": 2010,
-            "clientsNumber": 100
+            "Chaker": {
+                "name": "Chaker",
+                "lastName": "Yaakoub",
+                "middleName": "Ayoub",
+                "specializations": [
+                    "Specialization 1",
+                    "Specialization 2"
+                ],
+                "workDomain": "Work Domain",
+                "about": "About John Doe",
+                "services": [
+                    "Service 1",
+                    "Service 2"
+                ],
+                "profileImgPath": "path/to/profile/image",
+                "logoPath": "path/to/logo/image",
+                "yearsExperience": 2010,
+                "clientsNumber": 100
+            }
         },
         "workspaceDescriptions": [
             {
