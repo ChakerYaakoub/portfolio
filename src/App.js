@@ -6,10 +6,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home, NotFound404 } from "./pages/index";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import createDataInFirestore from "./utils/dataCreate";
 
 function App() {
   const dispatch = useDispatch();
   const data = useSelector(state => state.data);
+
+  useEffect(() => {
+    createDataInFirestore();
+  }, []); // runs only once
 
   useEffect(() => {
     dispatch(fetchDataAndStoreInRedux());
