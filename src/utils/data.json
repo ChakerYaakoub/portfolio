@@ -1,7 +1,7 @@
 {
     "dataUser": {
         "userInfo": {
-            "Chaker": {
+            "info": {
                 "name": "Chaker",
                 "lastName": "Yaakoub",
                 "middleName": "Ayoub",
@@ -17,6 +17,7 @@
                 ],
                 "profileImgPath": "path/to/profile/image",
                 "logoPath": "path/to/logo/image",
+                "logoPath2": "path/to/logo/image",
                 "yearsExperience": 2010,
                 "clientsNumber": 100
             }
@@ -33,11 +34,24 @@
                 "title": "Workspace Title 2",
                 "briefDescription": "Brief description of workspace 2",
                 "description": "Full description of workspace 2"
+            } ,
+            {
+                "photo": "path/to/workspace/photo",
+                "title": "Workspace Title 3",
+                "briefDescription": "Brief description of workspace 2",
+                "description": "Full description of workspace 2"
+            } ,
+            {
+                "photo": "path/to/workspace/photo",
+                "title": "Workspace Title 4",
+                "briefDescription": "Brief description of workspace 2",
+                "description": "Full description of workspace 2"
             }
         ],
         "skills": {
             "skillsInfo": {
                 "resume": "Resume text",
+                "photo": "path/to/workspace/photo",
                 "skills": [
                     {
                         "name": "Skill 1",
@@ -45,6 +59,10 @@
                     },
                     {
                         "name": "Skill 2",
+                        "percentage": 90
+                    } ,
+                    {
+                        "name": "Skill 3",
                         "percentage": 90
                     }
                 ]
@@ -56,16 +74,26 @@
                 "location": "Work Location",
                 "briefDescription": "Brief description 1",
                 "description": "Work Description 1",
-                "from": "2022-01-01",
-                "to": "2022-12-31"
+                "from": "2018-02-10T00:00:00.000Z",
+                "to": "2022-12-31T00:00:00.000Z"
             },
             "periodInfo2": {
                 "title": "Work Title 2",
                 "location": "Work Location",
                 "briefDescription": "Brief description 2",
                 "description": "Work Description 2",
-                "from": "2022-01-01",
-                "to": "2022-12-31"
+                "from": "2018-02-10T00:00:00.000Z",
+                "to": "2022-12-31T00:00:00.000Z"
+                
+            } ,
+            "periodInfo3": {
+                "title": "Work Title 3",
+                "location": "Work Location",
+                "briefDescription": "Brief description 3",
+                "description": "Work Description 2",
+                "from": "2018-02-10T00:00:00.000Z",
+                "to": "2022-12-31T00:00:00.000Z"
+                
             }
         },
         "aboutUs": {
@@ -78,11 +106,13 @@
                 "brief": "Services brief description",
                 "services": [
                     "Service A",
-                    "Service B"
+                    "Service B" ,
+                    "Service C"
                 ],
                 "personalizedSolutions": [
                     "Solution 1",
-                    "Solution 2"
+                    "Solution 2" ,
+                    "Solution 3"
                 ]
             }
         },
@@ -95,8 +125,8 @@
                 "twitter": "twitter.com",
                 "facebook": "facebook.com",
                 "instagram": "instagram.com",
-                "email": "example@example.com",
-                "website": "example.com"
+                "email": "chakeryb.pc@gmail.com",
+                "website": "www.example.com"
             }
         }
     }
