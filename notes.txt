@@ -1,0 +1,4 @@
+Desktop : 
+
+npx create-react-app portfolio 
+cd  portfolio
