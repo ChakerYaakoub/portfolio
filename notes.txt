@@ -35,5 +35,28 @@ chose main branch  with src
 git push origin main 
 
 
+npm install firebase
+npm install firebase-admin
+
+
 npm run build
 firebase deploy
+
+
+now you have to find the  Configuration : 
+chose the project / Project settings  : navigate to web  app 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+
+const createDataInFirestore = require('./utils/dataCreate');
+
 
 function App() {
+
+
+  useEffect(() => {
+    createDataInFirestore();
+  }, []); //  runs only once
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,9 +26,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React test
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Iusto est, voluptas corrupti ipsa culpa perspiciatis eligendi sed libero, ipsam magnam dolore earum architecto odit! Facilis explicabo repudiandae atque doloribus reprehenderit.
+          Learn React
         </a>
       </header>
     </div>

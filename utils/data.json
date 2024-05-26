@@ -1,0 +1,101 @@
+{
+    "users": {
+        "userInfo": {
+            "name": "Chaker",
+            "lastName": "Yaakoub",
+            "middleName": "Ayoub",
+            "specializations": [
+                "Specialization 1",
+                "Specialization 2"
+            ],
+            "workDomain": "Work Domain",
+            "about": "About John Doe",
+            "services": [
+                "Service 1",
+                "Service 2"
+            ],
+            "profileImgPath": "path/to/profile/image",
+            "logoPath": "path/to/logo/image",
+            "yearsExperience": 2010,
+            "clientsNumber": 100
+        }
+    },
+    "workspaceDescriptions": [
+        {
+            "photo": "path/to/workspace/photo",
+            "title": "Workspace Title 1",
+            "briefDescription": "Brief description of workspace 1",
+            "description": "Full description of workspace 1"
+        },
+        {
+            "photo": "path/to/workspace/photo",
+            "title": "Workspace Title 2",
+            "briefDescription": "Brief description of workspace 2",
+            "description": "Full description of workspace 2"
+        }
+    ],
+    "skills": {
+        "skillsInfo": {
+            "resume": "Resume text",
+            "skills": [
+                {
+                    "name": "Skill 1",
+                    "percentage": 80
+                },
+                {
+                    "name": "Skill 2",
+                    "percentage": 90
+                }
+            ]
+        }
+    },
+    "workingPeriods": {
+        "periodInfo1": {
+            "title": "Work  Title 1",
+            "location": "Work Location",
+            "briefDescription": "Brief description 1",
+            "description": "Work Description 1",
+            "from": "2022-01-01",
+            "to": "2022-12-31"
+        },
+        "periodInfo2": {
+            "title": "Work Title 2",
+            "location": "Work Location",
+            "briefDescription": "Brief description 2",
+            "description": "Work Description 2",
+            "from": "2022-01-01",
+            "to": "2022-12-31"
+        }
+    },
+    "aboutUs": {
+        "aboutInfo": {
+            "about": "About us description"
+        }
+    },
+    "services": {
+        "servicesInfo": {
+            "brief": "Services brief description",
+            "services": [
+                "Service A",
+                "Service B"
+            ],
+            "personalizedSolutions": [
+                "Solution 1",
+                "Solution 2"
+            ]
+        }
+    },
+    "contactUs": {
+        "contactInfo": {
+            "location": "Location",
+            "telephone": "123456789",
+            "whatsapp": "123456789",
+            "tiktok": "tiktok.com",
+            "twitter": "twitter.com",
+            "facebook": "facebook.com",
+            "instagram": "instagram.com",
+            "email": "example@example.com",
+            "website": "example.com"
+        }
+    }
+}
