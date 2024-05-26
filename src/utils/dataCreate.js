@@ -14,7 +14,7 @@ const db = getFirestore(firebaseApp);
 const createDataInFirestore = async (data = dataUser) => {
     try {
         // Loop through each collection in the JSON data
-        for (const collectionName in data) {
+        for (const collectionName in data.dataUser) {
             console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
