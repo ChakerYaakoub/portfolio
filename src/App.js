@@ -4,7 +4,7 @@ import createDataInFirestore from "./utils/dataCreate";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDataAndStoreInRedux } from './reducers/dataReducer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Home, NotFound404 } from "./Pages/index";
+import { Home, NotFound404 } from "./pages/index";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
