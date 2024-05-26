@@ -18,6 +18,7 @@ const createDataInFirestore = async (data = dataUser) => {
             console.log(`Creating collection '${collectionName}'...`);
             // Get the collection reference
             const collectionRef = collection(db, collectionName);
+            console.log(collectionRef);
 
             // Check if the collection exists
             const collectionSnapshot = await getDocs(collectionRef);
