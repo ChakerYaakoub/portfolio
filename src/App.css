@@ -1203,7 +1203,8 @@ textarea.input-field {
     width: 410px;
     height: 600px;
     /* background-image: url("../images/rere.png"); */
-    background-image: url("../images/backgroundBilal.jpg");
+    /* you have to add this by js  */
+    /* background-image: url("../images/backgroundBilal.jpg"); */
 
     background-repeat: no-repeat;
     background-size: contain;
