@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import createDataInFirestore from '../utils/dataCreate';
+import createDataInFirestore from './utils/dataCreate';
 
 
 
