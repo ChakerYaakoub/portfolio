@@ -1,17 +1,17 @@
 // dataCreate.js
 
-const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey.json');
-const dataUser = require('./data.json');
+import { initializeApp, credential as _credential, firestore } from 'firebase-admin';
+import serviceAccount from './serviceAccountKey.json';
+import dataUser from './data.json';
 
 
 // Initialize Firebase Admin SDK
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+initializeApp({
+    credential: _credential.cert(serviceAccount),
 });
 
 // Create a Firestore database reference
-const db = admin.firestore();
+const db = firestore();
 
 // Function to create data in Firestore
 const createDataInFirestore = async (data = dataUser) => {
@@ -43,4 +43,4 @@ const createDataInFirestore = async (data = dataUser) => {
 };
 
 // Export the function to use in other files
-module.exports = createDataInFirestore;
+export default createDataInFirestore;
